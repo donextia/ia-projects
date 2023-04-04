@@ -1,3 +1,5 @@
+!pip install --upgrade langchain
+
 import streamlit as st
 import os
 from langchain.agents import load_tools
