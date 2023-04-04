@@ -5,8 +5,6 @@ from langchain.agents import initialize_agent
 from langchain.llms import OpenAI
 
 # Reemplaza estas claves con las tuyas
-openai_api_key = "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"
-serpapi_key = "4c2bfea367cf7f7baac31858ad4693acb4446790aae847b924991029880b224e"
 
 os.environ["OPENAI_API_KEY"] = openai_api_key
 os.environ["SERPAPI_API_KEY"] = serpapi_key
