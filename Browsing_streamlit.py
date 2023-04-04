@@ -1,4 +1,4 @@
-!pip install --upgrade langchain
+pip install --upgrade langchain
 
 import streamlit as st
 import os
