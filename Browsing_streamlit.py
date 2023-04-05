@@ -4,12 +4,11 @@ from langchain.agents import load_tools
 from langchain.agents import initialize_agent
 from langchain.llms import OpenAI
 
-# Reemplaza estas claves con las tuyas
-openai_api_key = "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"
-serpapi_key = "4c2bfea367cf7f7baac31858ad4693acb4446790aae847b924991029880b224e"
+openai_api_key = st.secrets["openai_api_key"]
+serpapi_api_key = st.secrets["serpapi_api_key"]
 
 os.environ["OPENAI_API_KEY"] = openai_api_key
-os.environ["SERPAPI_API_KEY"] = serpapi_key
+os.environ["SERPAPI_API_KEY"] = serpapi_api_key
 
 llm = OpenAI(temperature=0)
 tools = load_tools(["serpapi", "llm-math"], llm=llm)
@@ -17,8 +16,6 @@ agent = initialize_agent(tools, llm, agent="zero-shot-react-description", verbos
 
 def llamar_api_externa(texto):
     respuesta = agent.run(texto)
-   # resultado = agent.run(texto)
-    #respuesta = resultado["choices"][0]["text"]
     return respuesta
 
 st.title("donext IA projects- ChatGPT conectado a internet")
