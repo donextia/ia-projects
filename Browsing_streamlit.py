@@ -18,7 +18,8 @@ def llamar_api_externa(texto):
     respuesta = agent.run(texto)
     return respuesta
 
-st.title("donext IA projects- ChatGPT conectado a internet")
+st.title("AInnovation Demos")
+st.tittle("ChatGPT connected to internet")
 
 pregunta = st.text_input("¿Cómo te puedo ayudar?")
 boton_obtener = st.button("Obtener respuesta")
