@@ -19,7 +19,7 @@ def llamar_api_externa(texto):
     return respuesta
 
 st.title("AInnovation Demos")
-st.tittle("ChatGPT connected to internet")
+st.title("ChatGPT connected to internet")
 
 pregunta = st.text_input("¿Cómo te puedo ayudar?")
 boton_obtener = st.button("Obtener respuesta")
